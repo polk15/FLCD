@@ -29,7 +29,7 @@ class BST:
     def in_order_print(self, root):
         if root:
             self.in_order_print(root.left)
-            print(f"Symbol: {root.symbol} Code: {root.index} \n")
+            print(f"Symbol: {root.symbol} Code: {root.index}")
             self.in_order_print(root.right)
 
     def search_recursive(self, root, symbol):
@@ -50,7 +50,7 @@ class BST:
         index = self.search(key)
 
         if index != -1 and index is not None:
-            return index.id
+            return index.index
         else:
             self.insert_recursive(self.root, Node(self.count, key))
             self.count += 1

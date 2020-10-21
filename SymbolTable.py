@@ -1,7 +1,7 @@
 from BST import BST
 
 
-class ST:
+class SymbolTable:
     def __init__(self):
         self.tree = BST()
 
