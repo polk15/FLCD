@@ -29,7 +29,7 @@ class BST:
     def in_order_print(self, root):
         if root:
             self.in_order_print(root.left)
-            print(f"Symbol: {root.symbol} Code: {root.index}")
+            print(f"Symbol: {root.symbol} - Code: {root.index}")
             self.in_order_print(root.right)
 
     def search_recursive(self, root, symbol):
@@ -37,11 +37,9 @@ class BST:
             return root
 
         if root.symbol < symbol:
-            self.search_recursive(root.right, symbol)
+            return self.search_recursive(root.right, symbol)
         else:
-            self.search_recursive(root.left, symbol)
-
-        return -1
+            return self.search_recursive(root.left, symbol)
 
     def search(self, symbol):
         return self.search_recursive(self.root, symbol)
@@ -58,3 +56,4 @@ class BST:
 
     def print(self):
         self.in_order_print(self.root)
+

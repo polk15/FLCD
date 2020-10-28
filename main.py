@@ -15,6 +15,8 @@ if __name__ == '__main__':
             line = line[0:-1]  # Skip \n
 
         for token in Scanner.get_tokens_from_line(line):
+            if token == ' ':
+                continue
             if token in operators_separator_words:
                 pif.add(codes[token], -1)
             elif Scanner.is_identifier(token):
@@ -24,8 +26,8 @@ if __name__ == '__main__':
                 # Add and return id or just return id
                 pif.add(codes['constant'], st.add(token))
             else:
-                print("Unknown token '{}' at line {}!".format(token, line_index))
+                print(f"Unknown token '{token}' at line {line_index}!")
 
-    print("Symbol table:")
+    print("Symbol table: ")
     st.print()
     print(f"Program internal form: {pif}")

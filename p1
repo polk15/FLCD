@@ -1,10 +1,10 @@
 int main ()
 {
- int a = 4, b=5, c=6;
- if(a >= b && a >= c)
-    write("Largest number is a");
- if(b >= a && b >= c)
+ int d=4, b=5, c=6;
+ if(d > b && d >= c)
+    write("Largest number is d");
+ if(b> = d && b >= c)
     write("Largest number is b");
- if(c >= a && c >= b)
+ if(c >= d && c >= b)
     write("Largest number is c");
 }
